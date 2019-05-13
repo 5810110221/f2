@@ -31,16 +31,16 @@ public class GameController implements PlayerListener {
   private GameController() {
     board = new Board(80);
 
-    p1_name = (String)JOptionPane.showInputDialog(
-        null,"\"Input Player1 name?\"","Input Player1 name",
-        JOptionPane.PLAIN_MESSAGE,null,null,"P1");
+    p1Name = (String)JOptionPane.showInputDialog(
+        null,"\"Input Player1 name?\"","Name",
+        JOptionPane.PLAIN_MESSAGE,null,null,"Player1");
 
-      p2_name = (String)JOptionPane.showInputDialog(
-        null,"\"Input Player2 name?\"","Input Player2 name",
-        JOptionPane.PLAIN_MESSAGE,null,null,"P2");
+    p2Name = (String)JOptionPane.showInputDialog(
+        null,"\"Input Player2 name?\"","Name",
+        JOptionPane.PLAIN_MESSAGE,null,null,"Player2");
 
-    p1 = new Player(p1_name, 0, board, this);
-    p2 = new Player(p2_name, 1, board, this);
+    p1 = new Player(p1Name, 0, board, this);
+    p2 = new Player(p2Name, 1, board, this);
     currentPlayer = p1;
     
     players.add(p1);
